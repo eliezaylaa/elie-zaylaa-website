@@ -194,23 +194,16 @@
     </main>
     <div class="site-footer" id="counter">Visitors: ...</div>
     <script>
-      const counterEl = document.getElementById("counter");
-
-      if (!localStorage.getItem("visited")) {
-        fetch("https://api.countapi.xyz/hit/eliezaylaa/website")
-          .then((res) => res.json())
-          .then((data) => {
-            counterEl.innerText = "Visitors: " + data.value;
-          });
-
-        localStorage.setItem("visited", "true");
-      } else {
-        fetch("https://api.countapi.xyz/get/eliezaylaa/website")
-          .then((res) => res.json())
-          .then((data) => {
-            counterEl.innerText = "Visitors: " + data.value;
-          });
-      }
+      fetch("https://api.counterapi.dev/v1/eliezaylaa/website/up")
+        .then((res) => res.json())
+        .then((data) => {
+          document.getElementById("counter").innerText =
+            "Visitors: " + data.count;
+        })
+        .catch(() => {
+          document.getElementById("counter").innerText =
+            "Visitors: unavailable";
+        });
     </script>
   </body>
 </html>
