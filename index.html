@@ -192,17 +192,5 @@
         <span>Paris, France</span>
       </div>
     </main>
-    <div class="site-footer" id="counter">Visitors: ...</div>
-    <script>
-      fetch("https://api.counterapi.dev/v1/eliezaylaa/website/up")
-        .then((res) => res.json())
-        .then((data) => {
-          document.getElementById("counter").innerText =
-            "Visitors: " + data.count;
-        })
-        .catch(() => {
-          document.getElementById("counter").innerText = "Visitors unavailable";
-        });
-    </script>
   </body>
 </html>
