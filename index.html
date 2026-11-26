@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#e9e6df" />
 
-    <title>Elie Zaylaa | Full-Stack Developer in Paris</title>
+    <title>Elie Zaylaa | Full-Stack Engineer in Paris</title>
     <meta
       name="description"
-      content="Elie Zaylaa is a full-stack developer based in Paris, Master's student at EPITECH and freelancer since 2021. Open to alternance and internships in France."
+      content="Elie Zaylaa is a full-stack engineer based in Paris, Master's student at EPITECH and freelancer since 2021. Open to alternance and internships in France."
     />
     <link rel="canonical" href="https://eliezaylaa.com/" />
+    <link rel="alternate" hreflang="en" href="https://eliezaylaa.com/" />
+    <link rel="alternate" hreflang="fr" href="https://eliezaylaa.com/fr/" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Elie Zaylaa | Full-Stack Developer in Paris" />
+    <meta property="og:title" content="Elie Zaylaa | Full-Stack Engineer in Paris" />
     <meta
       property="og:description"
-      content="Full-stack developer, EPITECH Paris, freelancing since 2021. Open to alternance and internships."
+      content="Full-stack engineer, EPITECH Paris, freelancing since 2021. Open to alternance and internships."
     />
     <meta property="og:url" content="https://eliezaylaa.com/" />
     <meta name="twitter:card" content="summary" />
@@ -29,7 +31,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css?v=5" />
+    <link rel="stylesheet" href="css/style.css?v=11" />
 
     <script type="application/ld+json">
       {
@@ -37,7 +39,7 @@
         "@type": "Person",
         "name": "Elie Zaylaa",
         "url": "https://eliezaylaa.com/",
-        "jobTitle": "Full-Stack Developer",
+        "jobTitle": "Full-Stack Engineer",
         "email": "mailto:elie.zaylaa@epitech.eu",
         "address": { "@type": "PostalAddress", "addressLocality": "Paris", "addressCountry": "FR" },
         "alumniOf": "EPITECH Paris",
@@ -56,10 +58,11 @@
           <span></span><span></span>
         </button>
         <nav id="nav-links" class="nav-links" aria-label="Main">
-          <a href="#projects">My work</a>
+          <a class="nav-pibly" href="#projects">Pibly</a>
           <a href="#about">About me</a>
           <a href="#experience">Experience</a>
           <a href="#contact" class="btn small">Let's talk ↗</a>
+          <a class="lang" href="fr/" hreflang="fr" lang="fr" aria-label="Version française">FR</a>
         </nav>
       </div>
     </header>
@@ -69,11 +72,11 @@
       <section class="hero" id="top">
         <div class="wrap hero-grid">
           <div class="hero-text">
-          <p class="label"><i class="dot"></i> Full-stack developer / AI integration / Paris</p>
-          <h1>I'm Elie, a full-stack developer building Pibly.</h1>
+          <p class="label"><i class="dot"></i> Full-stack engineer / AI integration / Paris</p>
+          <h1>I'm Elie, a full-stack engineer building AI-powered apps.</h1>
           <p class="lead">Master's student at EPITECH Paris. I've built apps for clients since 2021, from the database to the interface.</p>
           <div class="hero-actions">
-            <a class="btn" href="assets/CV_Elie_Zaylaa.pdf" download>
+            <a class="btn" href="assets/en/CV_Elie_Zaylaa.pdf" download>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
               Download my CV
             </a>
@@ -96,23 +99,19 @@
               <figcaption><span>Elie Zaylaa</span><span>Paris, France</span></figcaption>
             </figure>
             <div class="reveal">
-              <h3 class="serif-lg">Code, products,<br />and getting things done.</h3>
+              <h3 class="serif-lg">Building products<br />and getting things done.</h3>
               <p>
-                I'm a full-stack developer based in Paris, finishing my Master's at EPITECH (class of 2027). I've been
-                freelancing since 2021, building apps for restaurants, a pharmacy and a clothing store. I do the whole
-                job myself: talk to the client, pick the stack, build it, ship it.
+                I'm a full-stack engineer based in Paris, finishing my Master's at EPITECH (class of 2027). I've been
+                freelancing since 2021 and I do the whole job myself: talk to the client, pick the stack, build it,
+                ship it.
               </p>
               <p>
                 These days I mostly build apps with AI in them: LLM APIs, RAG, LangChain agents, MCP servers. I like
-                using AI where it saves real time and keeping a human in the loop where it matters.
-              </p>
-              <p>
-                Before tech I worked in hospitality, and I still tutor maths, coding and languages. Both taught me to
-                explain things simply and stay calm with real people.
+                using AI where it saves real time and keeping someone in the loop where it matters.
               </p>
               <blockquote class="focus">
                 <span class="mono-sm red">Current focus</span>
-                I'm looking for an alternance or a 4 to 6 month internship in full-stack or AI development, anywhere
+                I'm looking for an alternance or a 4 to 6 month internship in full-stack or AI engineering, anywhere
                 in France.
               </blockquote>
               <p class="links">
@@ -137,16 +136,11 @@
                 Describe what you need in a sentence and get matched with someone who can help. Talk over chat, audio
                 or video, from the web or the iOS and Android apps. AI helps match each request with the right person.
               </p>
-              <p>
-                I'm building it end to end: the web app, the backend and the mobile apps. It's still early and being
-                tested with a small group of people.
-              </p>
             </div>
             <dl class="spec">
               <div><dt>Status</dt><dd>In development, early testing</dd></div>
               <div><dt>Platforms</dt><dd>Web, iOS, Android</dd></div>
               <div><dt>Stack</dt><dd>React, React Native, Node.js, PostgreSQL, WebRTC, Gemini, AWS, Render</dd></div>
-              <div><dt>Repository</dt><dd>Private</dd></div>
             </dl>
           </div>
 
@@ -199,13 +193,8 @@
             <div class="t-item reveal">
               <div class="t-meta mono-sm">Jan 2021 to now<br />Beirut &amp; Paris</div>
               <div class="t-body">
-                <h3>Freelance Developer</h3>
-                <ul>
-                  <li>Built apps for about six clients, from the first call to delivery.</li>
-                  <li>An Android stock management app in Java for a clothing store (Eldorado), used by around 70 people.</li>
-                  <li>A PHP web app with an admin dashboard for a pharmacy.</li>
-                  <li>Websites for restaurants, including Sama Beyrouth in Paris.</li>
-                </ul>
+                <h3>Freelance Full-Stack Engineer</h3>
+                <p>Web and mobile apps for local businesses, from the first call to delivery.</p>
               </div>
             </div>
             <div class="t-item reveal">
@@ -213,10 +202,13 @@
               <div class="t-body">
                 <h3>Master in Information Technology</h3>
                 <p class="sub">EPITECH Paris, RNCP level 7 (Bac+5)</p>
-                <ul>
-                  <li>Project-based: full-stack, networks and security, DevOps and AI.</li>
-                  <li>Team projects in Scrum, including a client project for Kiabi.</li>
-                </ul>
+              </div>
+            </div>
+            <div class="t-item reveal">
+              <div class="t-meta mono-sm">Bachelor<br />Lebanon</div>
+              <div class="t-body">
+                <h3>Bachelor in Computer Science</h3>
+                <p class="sub">American University of Technology</p>
               </div>
             </div>
           </div>
@@ -235,26 +227,31 @@
 
       <!-- CONTACT -->
       <section class="section contact" id="contact">
-        <div class="wrap">
-          <p class="label reveal">04 / What's next?</p>
-          <h2 class="title big reveal">Let's talk.</h2>
-          <p class="contact-text reveal">
-            I'm looking for an alternance or a 4 to 6 month internship in full-stack or AI development. If you have a
-            role or a project in mind, send me a message.
-          </p>
-          <div class="hero-actions reveal">
-            <a class="btn red-btn" href="mailto:elie.zaylaa@epitech.eu">Email me</a>
-            <a class="btn" href="https://linkedin.com/in/eliezaylaa" target="_blank" rel="noopener">LinkedIn ↗</a>
-            <a class="btn" href="https://github.com/eliezaylaa" target="_blank" rel="noopener">GitHub ↗</a>
-            <a class="btn" href="assets/CV_Elie_Zaylaa.pdf" download>Download my CV</a>
+        <div class="wrap contact-grid">
+          <div class="contact-copy">
+            <p class="label reveal">04 / What's next?</p>
+            <h2 class="title big reveal">Let's talk.</h2>
+            <p class="contact-text reveal">
+              I'm looking for an alternance or a 4 to 6 month internship in full-stack or AI engineering. If you have a
+              role or a project in mind, send me a message.
+            </p>
+            <div class="hero-actions reveal">
+              <a class="btn red-btn" href="mailto:elie.zaylaa@epitech.eu">Email me</a>
+              <a class="btn" href="https://linkedin.com/in/eliezaylaa" target="_blank" rel="noopener">LinkedIn ↗</a>
+              <a class="btn" href="https://github.com/eliezaylaa" target="_blank" rel="noopener">GitHub ↗</a>
+              <a class="btn" href="assets/en/CV_Elie_Zaylaa.pdf" download>Download my CV</a>
+            </div>
           </div>
+          <figure class="paris reveal">
+            <img src="assets/paris.jpg?v=1" alt="Elie in front of the Eiffel Tower at night" width="1306" height="1971" loading="lazy" />
+          </figure>
         </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="wrap footer-row">
-        <span>© <span id="year">2026</span> Elie Zaylaa. Code. Products. Real people.</span>
+        <span>© <span id="year">2026</span> Elie Zaylaa. Products. Real people.</span>
         <a href="#top">Back to top ↑</a>
       </div>
     </footer>
