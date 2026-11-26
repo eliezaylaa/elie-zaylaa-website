@@ -59,15 +59,15 @@
   // Project rail arrows
   var rail = document.getElementById("rail");
   function step() {
-    var card = rail.querySelector(".proj");
+    var card = rail && rail.querySelector(".proj");
     return card ? card.getBoundingClientRect().width + 20 : 400;
   }
-  document.getElementById("prev").addEventListener("click", function () {
-    rail.scrollBy({ left: -step(), behavior: "smooth" });
-  });
-  document.getElementById("next").addEventListener("click", function () {
-    rail.scrollBy({ left: step(), behavior: "smooth" });
-  });
+  var prev = document.getElementById("prev");
+  var next = document.getElementById("next");
+  if (rail && prev && next) {
+    prev.addEventListener("click", function () { rail.scrollBy({ left: -step(), behavior: "smooth" }); });
+    next.addEventListener("click", function () { rail.scrollBy({ left: step(), behavior: "smooth" }); });
+  }
 
   document.getElementById("year").textContent = new Date().getFullYear();
 })();
