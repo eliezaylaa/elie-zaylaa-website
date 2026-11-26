@@ -1,6 +1,11 @@
 (function () {
   document.documentElement.classList.add("js");
 
+  // Always start at the top (header) on load or refresh
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+  window.scrollTo(0, 0);
+
   var toggle = document.querySelector(".nav-toggle");
   var links = document.getElementById("nav-links");
 
