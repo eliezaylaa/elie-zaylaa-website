@@ -1,15 +1,8 @@
 (function () {
   document.documentElement.classList.add("js");
 
-  var nav = document.getElementById("nav");
   var toggle = document.querySelector(".nav-toggle");
   var links = document.getElementById("nav-links");
-
-  function onScroll() {
-    nav.classList.toggle("scrolled", window.scrollY > 20);
-  }
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
 
   function setMenu(open) {
     links.classList.toggle("open", open);
@@ -19,7 +12,7 @@
     setMenu(!links.classList.contains("open"));
   });
   links.addEventListener("click", function (e) {
-    if (e.target.tagName === "A") setMenu(false);
+    if (e.target.closest("a")) setMenu(false);
   });
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") setMenu(false);
@@ -37,7 +30,7 @@
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.1 }
     );
     items.forEach(function (el) { io.observe(el); });
   } else {
@@ -45,8 +38,8 @@
   }
 
   // Active nav link
+  var navLinks = links.querySelectorAll("a:not(.btn)");
   var sections = document.querySelectorAll("main section[id]");
-  var navLinks = links.querySelectorAll("a");
   if ("IntersectionObserver" in window) {
     var so = new IntersectionObserver(
       function (entries) {
@@ -63,13 +56,17 @@
     sections.forEach(function (s) { so.observe(s); });
   }
 
-  // Card spotlight
-  document.querySelectorAll(".card").forEach(function (card) {
-    card.addEventListener("mousemove", function (e) {
-      var r = card.getBoundingClientRect();
-      card.style.setProperty("--mx", e.clientX - r.left + "px");
-      card.style.setProperty("--my", e.clientY - r.top + "px");
-    });
+  // Project rail arrows
+  var rail = document.getElementById("rail");
+  function step() {
+    var card = rail.querySelector(".proj");
+    return card ? card.getBoundingClientRect().width + 20 : 400;
+  }
+  document.getElementById("prev").addEventListener("click", function () {
+    rail.scrollBy({ left: -step(), behavior: "smooth" });
+  });
+  document.getElementById("next").addEventListener("click", function () {
+    rail.scrollBy({ left: step(), behavior: "smooth" });
   });
 
   document.getElementById("year").textContent = new Date().getFullYear();
