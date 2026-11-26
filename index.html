@@ -29,7 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css?v=3" />
+    <link rel="stylesheet" href="css/style.css?v=5" />
 
     <script type="application/ld+json">
       {
@@ -70,7 +70,8 @@
         <div class="wrap hero-grid">
           <div class="hero-text">
           <p class="label"><i class="dot"></i> Full-stack developer / AI integration / Paris</p>
-          <h1>A full-stack developer who builds apps people actually use.</h1>
+          <h1>I'm Elie, a full-stack developer building Pibly.</h1>
+          <p class="lead">Master's student at EPITECH Paris. I've built apps for clients since 2021, from the database to the interface.</p>
           <div class="hero-actions">
             <a class="btn" href="assets/CV_Elie_Zaylaa.pdf" download>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
@@ -126,83 +127,64 @@
       <!-- PROJECTS -->
       <section class="section" id="projects">
         <div class="wrap">
-          <div class="work-head">
-            <div>
-              <p class="label reveal">02 / Selected work</p>
-              <h2 class="title reveal">Built to make<br />things work.</h2>
+          <p class="label reveal">02 / Main project</p>
+
+          <div class="pibly reveal">
+            <div class="pibly-main">
+              <h2 class="pibly-title">Pibly</h2>
+              <p class="pibly-tag">Live help from real people.</p>
+              <p>
+                Describe what you need in a sentence and get matched with someone who can help. Talk over chat, audio
+                or video, from the web or the iOS and Android apps. AI helps match each request with the right person.
+              </p>
+              <p>
+                I'm building it end to end: the web app, the backend and the mobile apps. It's still early and being
+                tested with a small group of people.
+              </p>
             </div>
-            <div class="arrows" aria-label="Scroll projects">
-              <button id="prev" aria-label="Previous project">←</button>
-              <button id="next" aria-label="Next project">→</button>
-            </div>
+            <dl class="spec">
+              <div><dt>Status</dt><dd>In development, early testing</dd></div>
+              <div><dt>Platforms</dt><dd>Web, iOS, Android</dd></div>
+              <div><dt>Stack</dt><dd>React, React Native, Node.js, PostgreSQL, WebRTC, Gemini, AWS, Render</dd></div>
+              <div><dt>Repository</dt><dd>Private</dd></div>
+            </dl>
           </div>
-        </div>
 
-        <div class="rail" id="rail" tabindex="0" aria-label="Projects">
-          <article class="proj feature">
-            <div class="proj-top"><span class="mono-sm">01 / Startup project</span><span>↗</span></div>
-            <h3>Pibly</h3>
-            <p>
-              Live help from real people. Describe what you need in a sentence, get matched with someone who can help,
-              and talk over chat, audio or video. Web app, backend and iOS/Android apps. Still early, and being tested
-              with a handful of people.
-            </p>
-            <div class="proj-foot">
-              <p class="tags"><span>React</span><span>React Native</span><span>Node.js</span><span>PostgreSQL</span><span>WebRTC</span><span>Gemini</span></p>
-              <span class="mono-sm">Private repository</span>
-            </div>
-          </article>
-
-          <article class="proj">
-            <div class="proj-top"><span class="mono-sm">02 / Hackathon</span><span>↗</span></div>
-            <h3>Verify</h3>
-            <p>
-              A news checker for journalists. Paste a draft or search a topic and it pulls live articles, extracts the
-              claims and labels each one Confirmed, Single source or Disputed, with a link to every source. The AI only
-              works from articles it just fetched, never from memory.
-            </p>
-            <div class="proj-foot">
-              <p class="tags"><span>React</span><span>Node.js</span><span>Gemini</span><span>GNews API</span><span>PostgreSQL</span></p>
-              <span class="mono-sm">Team of 3</span>
-            </div>
-          </article>
-
-          <article class="proj">
-            <div class="proj-top"><span class="mono-sm">03 / Team project</span><span>↗</span></div>
-            <h3>Trinity</h3>
-            <p>
-              A grocery management platform with a web app and a React Native mobile app, built with a small Scrum team
-              through pull requests. I chose the stack and architecture, and added an AI assistant using RAG over
-              pgvector.
-            </p>
-            <div class="proj-foot">
-              <p class="tags"><span>React</span><span>React Native</span><span>TypeScript</span><span>PostgreSQL</span><span>pgvector</span><span>LangChain</span></p>
-              <p class="proj-links">
-                <a href="https://github.com/eliezaylaa/grocery-management-platform" target="_blank" rel="noopener">Web app ↗</a>
-                <a href="https://github.com/Cello-miao/TrinityDevApp" target="_blank" rel="noopener">Mobile app ↗</a>
-              </p>
-            </div>
-          </article>
-
-          <article class="proj">
-            <div class="proj-top"><span class="mono-sm">04 / Machine learning</span><span>↗</span></div>
-            <h3>Zoidberg</h3>
-            <p>
-              Pneumonia detection from chest X-rays. I compared logistic regression, random forest, SVM and a CNN: the
-              SVM hit 97% on validation and the CNN reached 78% on the harder test set. There's a live demo you can try
-              with your own image.
-            </p>
-            <div class="proj-foot">
-              <p class="tags"><span>Python</span><span>scikit-learn</span><span>TensorFlow</span><span>Gradio</span></p>
-              <p class="proj-links">
-                <a href="https://huggingface.co/spaces/eliezaylaa/zoidberg" target="_blank" rel="noopener">Live demo ↗</a>
-                <a href="https://github.com/eliezaylaa/zoidberg" target="_blank" rel="noopener">View on GitHub ↗</a>
-              </p>
-            </div>
-          </article>
-        </div>
-
-        <div class="wrap">
+          <h3 class="serif-lg others-title reveal">Other projects</h3>
+          <ul class="others">
+            <li class="reveal">
+              <div class="o-meta mono-sm">Hackathon<br />Team of 3</div>
+              <div class="o-body">
+                <h3>Verify</h3>
+                <p>A news checker for journalists. It pulls live articles, extracts the claims and labels each one Confirmed, Single source or Disputed, with a link to every source.</p>
+                <p class="tags"><span>React</span><span>Node.js</span><span>Gemini</span><span>PostgreSQL</span></p>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="o-meta mono-sm">Team project<br />Scrum</div>
+              <div class="o-body">
+                <h3>Trinity</h3>
+                <p>A grocery management platform with a web app and a React Native mobile app, built with a Scrum team. Includes an AI assistant using RAG over pgvector.</p>
+                <p class="tags"><span>React</span><span>React Native</span><span>TypeScript</span><span>pgvector</span></p>
+                <p class="o-links">
+                  <a href="https://github.com/eliezaylaa/grocery-management-platform" target="_blank" rel="noopener">Web app ↗</a>
+                  <a href="https://github.com/Cello-miao/TrinityDevApp" target="_blank" rel="noopener">Mobile app ↗</a>
+                </p>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="o-meta mono-sm">Machine learning<br />EPITECH</div>
+              <div class="o-body">
+                <h3>Zoidberg</h3>
+                <p>Pneumonia detection from chest X-rays, comparing classical ML and a CNN (SVM 97% on validation, CNN 78% on the test set). There's a live demo on Hugging Face.</p>
+                <p class="tags"><span>Python</span><span>scikit-learn</span><span>TensorFlow</span></p>
+                <p class="o-links">
+                  <a href="https://huggingface.co/spaces/eliezaylaa/zoidberg" target="_blank" rel="noopener">Live demo ↗</a>
+                  <a href="https://github.com/eliezaylaa/zoidberg" target="_blank" rel="noopener">GitHub ↗</a>
+                </p>
+              </div>
+            </li>
+          </ul>
           <p class="more reveal"><a href="https://github.com/eliezaylaa" target="_blank" rel="noopener">More on my GitHub ↗</a></p>
         </div>
       </section>
