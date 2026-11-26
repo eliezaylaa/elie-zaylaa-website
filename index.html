@@ -4,200 +4,355 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#020617" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <title>Elie Zaylaa — Full-Stack &amp; AI Developer</title>
     <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
+      name="description"
+      content="Elie Zaylaa — full-stack developer building AI-powered products. Master's student at EPITECH Paris, freelance developer since 2021. Open to alternance and internship opportunities in France."
     />
-    <title>Elie Zaylaa</title>
+    <link rel="canonical" href="https://eliezaylaa.com/" />
 
-    <style>
-      * {
-        box-sizing: border-box;
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Elie Zaylaa — Full-Stack &amp; AI Developer" />
+    <meta
+      property="og:description"
+      content="Full-stack developer building AI-powered products. EPITECH Paris, freelance since 2021."
+    />
+    <meta property="og:url" content="https://eliezaylaa.com/" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Elie Zaylaa",
+        "url": "https://eliezaylaa.com/",
+        "jobTitle": "Full-Stack & AI Developer",
+        "address": { "@type": "PostalAddress", "addressLocality": "Paris", "addressCountry": "FR" },
+        "alumniOf": "EPITECH Paris",
+        "sameAs": ["https://github.com/eliezaylaa", "https://linkedin.com/in/eliezaylaa"]
       }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        font-family: Inter, system-ui, sans-serif;
-
-        background:
-          radial-gradient(
-            circle at 20% 20%,
-            rgba(59, 130, 246, 0.25),
-            transparent 45%
-          ),
-          radial-gradient(
-            circle at 80% 80%,
-            rgba(14, 165, 233, 0.2),
-            transparent 45%
-          ),
-          linear-gradient(180deg, #020617, #020617);
-
-        color: #e5e7eb;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 24px;
-      }
-
-      .card {
-        width: 100%;
-        max-width: 520px;
-        padding: 40px;
-        border-radius: 28px;
-        background: rgba(15, 23, 42, 0.75);
-        border: 1px solid rgba(148, 163, 184, 0.25);
-        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
-        backdrop-filter: blur(18px);
-      }
-
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      h1 {
-        margin: 0;
-        margin-top: 19px;
-        margin-left: 0px;
-        font-size: clamp(80px, 8vw, 80px);
-        letter-spacing: -0.06em;
-        line-height: 1;
-        color: #ffffff;
-        display: flex;
-      }
-
-      .icons {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      .icons a {
-        all: unset;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .icons img,
-      .icons svg {
-        width: 90px;
-        height: 100px;
-        filter: brightness(0) invert(1);
-        opacity: 0.85;
-        transition: 0.2s;
-      }
-
-      .icons img:hover,
-      .icons svg:hover {
-        opacity: 1;
-        transform: scale(1.15);
-      }
-
-      .subtitle {
-        margin: 18px 0 30px;
-        color: #94a3b8;
-        font-size: 17px;
-        line-height: 1.6;
-      }
-
-      .links {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 14px;
-      }
-
-      a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 52px;
-        border-radius: 16px;
-        text-decoration: none;
-        color: #ffffff;
-        font-weight: 700;
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(148, 163, 184, 0.22);
-        transition: 0.2s ease;
-      }
-
-      a.primary {
-        background: linear-gradient(135deg, #2563eb, #0ea5e9);
-        border: none;
-      }
-
-      a:hover {
-        transform: translateY(-3px);
-        border-color: rgba(147, 197, 253, 0.6);
-        background: rgba(255, 255, 255, 0.13);
-      }
-
-      a.primary:hover {
-        background: linear-gradient(135deg, #1d4ed8, #0284c7);
-      }
-
-      .footer {
-        margin-top: 26px;
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        color: #64748b;
-        font-size: 12px;
-      }
-      .site-footer {
-        position: fixed;
-        bottom: 12px;
-        width: 100%;
-        text-align: right;
-        font-size: 12px;
-        color: #64748b;
-      }
-
-      @media (max-width: 520px) {
-        .card {
-          padding: 30px 24px;
-        }
-
-        .links {
-          grid-template-columns: 1fr;
-        }
-
-        .footer {
-          flex-direction: column;
-          text-align: center;
-        }
-      }
-    </style>
+    </script>
   </head>
 
   <body>
-    <main class="card">
-      <div class="header">
-        <h1>Elie<br />Zaylaa</h1>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="bg" aria-hidden="true"></div>
 
-        <div class="icons">
-          <a href="https://github.com/eliezaylaa" target="_blank">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-            />
-          </a>
+    <header class="nav" id="nav">
+      <a class="brand" href="#top" aria-label="Elie Zaylaa — home">EZ<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
+      <nav id="nav-links" class="nav-links" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </header>
 
-          <a href="https://linkedin.com/in/eliezaylaa" target="_blank">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="white">
-              <path
-                d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.3c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.3h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.97v5.69h-3v-10h2.88v1.37h.04c.4-.75 1.37-1.54 2.82-1.54 3.02 0 3.58 1.99 3.58 4.58v5.59z"
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="wrap hero-grid">
+          <div class="hero-text">
+            <p class="badge"><span class="dot"></span> Open to alternance &amp; internship · France</p>
+            <h1>
+              Hi, I’m <span class="grad">Elie Zaylaa</span>.<br />
+              I build full-stack products with AI inside.
+            </h1>
+            <p class="lead">
+              Master’s student at EPITECH Paris and freelance developer since 2021. I design and ship web and
+              mobile apps end to end — from the database to the interface — and integrate LLMs, RAG pipelines
+              and agents where they actually help.
+            </p>
+            <div class="cta-row">
+              <a class="btn primary" href="#projects">View my work</a>
+              <a class="btn" href="#contact">Get in touch</a>
+            </div>
+            <ul class="stats" aria-label="Highlights">
+              <li><strong>2021</strong><span>freelancing since</span></li>
+              <li><strong>6+</strong><span>client projects</span></li>
+              <li><strong>2027</strong><span>M2 graduation, EPITECH</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-photo reveal">
+            <div class="photo-frame">
+              <!-- Drop your photo at assets/photo.jpg (square or 4:5 works best). -->
+              <img
+                src="assets/photo.jpg"
+                alt="Portrait of Elie Zaylaa"
+                width="520"
+                height="620"
+                onerror="this.remove()"
               />
-            </svg>
-          </a>
+              <span class="photo-fallback" aria-hidden="true">EZ</span>
+            </div>
+            <div class="float-chip c1">React · TypeScript</div>
+            <div class="float-chip c2">Node · PostgreSQL</div>
+            <div class="float-chip c3">LLMs · RAG</div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="footer">
-        <span>Paris, France</span>
-      </div>
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <div class="wrap">
+          <p class="eyebrow">01 — About</p>
+          <div class="about-grid">
+            <h2 class="reveal">Product-minded developer, comfortable across the whole stack.</h2>
+            <div class="reveal prose">
+              <p>
+                I’m based in Paris and finishing my Master’s in Information Technology at EPITECH (RNCP level 7,
+                class of 2027). Alongside my studies I’ve worked as a freelance developer for about six years,
+                building apps for restaurants, a pharmacy and retail clients — handling onboarding, scoping,
+                development and delivery myself.
+              </p>
+              <p>
+                Lately my focus is full-stack development with AI integration: LLM APIs, retrieval-augmented
+                generation, LangChain/LangGraph agents and MCP servers. I choose the stack, write the API, wire up
+                the front end, and work in Scrum with pull requests when I’m on a team.
+              </p>
+              <p>
+                Before tech I worked in hospitality, and I tutor maths, coding and languages — so I’m used to
+                explaining things clearly and dealing with real people under pressure.
+              </p>
+              <ul class="facts">
+                <li><span>Based in</span> Paris, France</li>
+                <li><span>Languages</span> French (B2) · English · Arabic</li>
+                <li><span>Looking for</span> Internship (4–6 months) or alternance</li>
+                <li><span>Mobility</span> Open to relocating across France</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section" id="projects">
+        <div class="wrap">
+          <p class="eyebrow">02 — Selected work</p>
+          <h2 class="reveal">Projects</h2>
+
+          <div class="cards">
+            <article class="card reveal">
+              <div class="card-top">
+                <span class="num">01</span>
+                <span class="tag-cat">Full-stack platform</span>
+              </div>
+              <h3>Trinity Grocery</h3>
+              <p>
+                Grocery management platform with a web app and a React Native mobile version, built by a small
+                Scrum team using pull requests. I chose the stack and architecture, and added an AI layer using
+                RAG with pgvector and LangChain.
+              </p>
+              <ul class="chips">
+                <li>React</li><li>React Native</li><li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li><li>pgvector</li><li>LangChain</li><li>AWS</li>
+              </ul>
+              <div class="card-links">
+                <a href="https://github.com/eliezaylaa/grocery-management-platform" target="_blank" rel="noopener">Web app on GitHub ↗</a>
+                <a href="https://github.com/Cello-miao/TrinityDevApp" target="_blank" rel="noopener">Mobile app ↗</a>
+              </div>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-top">
+                <span class="num">02</span>
+                <span class="tag-cat">AI · RAG</span>
+              </div>
+              <h3>HR AI Chatbot API</h3>
+              <p>
+                Backend API for an HR assistant that answers employee questions with retrieval-augmented
+                generation over company documents.
+              </p>
+              <ul class="chips">
+                <li>RAG</li><li>LLM APIs</li><li>LangChain</li><li>pgvector</li><li>Python</li>
+              </ul>
+              <div class="card-links">
+                <a href="https://github.com/eliezaylaa/hr-ai-chatbot-api" target="_blank" rel="noopener">View on GitHub ↗</a>
+              </div>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-top">
+                <span class="num">03</span>
+                <span class="tag-cat">Startup project · In development</span>
+              </div>
+              <h3>Pibly</h3>
+              <p>
+                A live human-help marketplace: ask a question in plain language, get matched with a real person,
+                and talk over chat, audio or video. Web, backend and iOS/Android mobile apps, with AI-assisted
+                request matching. Currently in early development.
+              </p>
+              <ul class="chips">
+                <li>React</li><li>React Native</li><li>Node.js</li><li>PostgreSQL</li><li>Gemini API</li><li>Render</li>
+              </ul>
+              <div class="card-links">
+                <span class="muted">Private repository</span>
+              </div>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-top">
+                <span class="num">04</span>
+                <span class="tag-cat">EPITECH · Client project</span>
+              </div>
+              <h3>Fittybird × Kiabi</h3>
+              <p>
+                Product concept for the retailer Kiabi: a live avatar built from a few photos, wearing the clothes
+                to show how they look and fit on your own body. Delivered as a team of three within EPITECH’s 360°
+                Framework.
+              </p>
+              <ul class="chips">
+                <li>Product design</li><li>Team of 3</li><li>Client brief</li>
+              </ul>
+              <div class="card-links">
+                <a href="https://github.com/eliezaylaa/360framework" target="_blank" rel="noopener">View on GitHub ↗</a>
+              </div>
+            </article>
+          </div>
+
+          <p class="more reveal">
+            More repositories — a C++ flight-sim core, a smart trash cans project, hackathon work and more — on
+            <a href="https://github.com/eliezaylaa" target="_blank" rel="noopener">GitHub ↗</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="section" id="skills">
+        <div class="wrap">
+          <p class="eyebrow">03 — Toolbox</p>
+          <h2 class="reveal">Skills</h2>
+
+          <div class="skills">
+            <div class="skill-group reveal">
+              <h3>Frontend</h3>
+              <ul class="chips">
+                <li>React</li><li>React Native</li><li>Next.js</li><li>Angular</li><li>TypeScript</li><li>JavaScript</li><li>HTML / CSS</li><li>SASS</li><li>Bootstrap</li>
+              </ul>
+            </div>
+            <div class="skill-group reveal">
+              <h3>Backend</h3>
+              <ul class="chips">
+                <li>Node.js / Express</li><li>Nest.js</li><li>Java / Spring Boot</li><li>C# / .NET</li><li>Python</li><li>PHP / Symfony</li><li>REST APIs</li><li>JWT auth</li>
+              </ul>
+            </div>
+            <div class="skill-group reveal">
+              <h3>AI</h3>
+              <ul class="chips">
+                <li>LLM APIs (OpenAI, Gemini)</li><li>RAG pipelines</li><li>LangChain / LangGraph</li><li>Agents</li><li>MCP servers</li><li>pgvector</li>
+              </ul>
+            </div>
+            <div class="skill-group reveal">
+              <h3>Data</h3>
+              <ul class="chips">
+                <li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>SQL Server</li><li>SQLite</li><li>Firebase</li><li>Power BI</li>
+              </ul>
+            </div>
+            <div class="skill-group reveal">
+              <h3>DevOps &amp; Cloud</h3>
+              <ul class="chips">
+                <li>Docker</li><li>GitHub Actions</li><li>GitLab CI/CD</li><li>AWS</li><li>Google Cloud</li><li>Linux</li><li>Raspberry Pi server</li>
+              </ul>
+            </div>
+            <div class="skill-group reveal">
+              <h3>Testing &amp; workflow</h3>
+              <ul class="chips">
+                <li>Jest</li><li>Supertest</li><li>JUnit / Mockito</li><li>Postman</li><li>Scrum</li><li>Git &amp; pull requests</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="section" id="experience">
+        <div class="wrap">
+          <p class="eyebrow">04 — Background</p>
+          <h2 class="reveal">Experience &amp; education</h2>
+
+          <div class="timeline">
+            <div class="t-item reveal">
+              <div class="t-date">2021 — Present</div>
+              <div class="t-body">
+                <h3>Freelance Developer</h3>
+                <p class="t-sub">Web &amp; mobile · Paris</p>
+                <ul>
+                  <li>Delivered apps for about six clients, from first call and scoping to deployment.</li>
+                  <li>Android stock-management app in Java for a clothing store (Eldorado), used by around 70 people.</li>
+                  <li>PHP web app with an admin dashboard (CRUD, authentication) for a pharmacy.</li>
+                  <li>Websites for restaurants, including Sama Beyrouth, a Lebanese restaurant in Paris.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="t-item reveal">
+              <div class="t-date">2027</div>
+              <div class="t-body">
+                <h3>Master en Technologies de l’Information</h3>
+                <p class="t-sub">EPITECH Paris · RNCP level 7 (Bac+5) · Promo 2027</p>
+                <ul>
+                  <li>Project-based curriculum: full-stack, networks and security, DevOps, AI.</li>
+                  <li>Team projects in Scrum, with real clients such as Kiabi.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="t-item reveal">
+              <div class="t-date">Ongoing</div>
+              <div class="t-body">
+                <h3>Private Tutor</h3>
+                <p class="t-sub">Maths, coding, French, Arabic &amp; English</p>
+                <ul>
+                  <li>One-to-one lessons, including through Preply.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section contact" id="contact">
+        <div class="wrap">
+          <p class="eyebrow">05 — Contact</p>
+          <div class="contact-card reveal">
+            <h2>Let’s build something together.</h2>
+            <p>
+              I’m looking for an alternance or internship in full-stack or AI development. If you have a role,
+              a project or just a question, I’d love to hear from you.
+            </p>
+            <div class="cta-row">
+              <a class="btn primary" href="https://linkedin.com/in/eliezaylaa" target="_blank" rel="noopener">Message me on LinkedIn</a>
+              <a class="btn" href="https://github.com/eliezaylaa" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div class="wrap footer-row">
+        <span>© <span id="year">2026</span> Elie Zaylaa · Paris, France</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
