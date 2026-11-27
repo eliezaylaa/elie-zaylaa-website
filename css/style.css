@@ -185,7 +185,7 @@ h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(38px, 5.4vw, 
 @media (max-width: 900px) {
   .contact-grid { grid-template-columns: 1fr; gap: 0; }
   .contact-copy { padding: 64px 0 36px; }
-  .paris { min-height: 0; aspect-ratio: 4 / 5; margin: 0 -28px; }
+  .paris { min-height: 0; height: 0; padding-bottom: min(125vw, 720px); width: 100vw; margin: 0 calc(50% - 50vw); align-self: start; }
   .paris::before { display: none; }
 }
 
