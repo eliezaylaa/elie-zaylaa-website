@@ -193,3 +193,106 @@ h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(38px, 5.4vw, 
 .nav-links .lang:hover { color: var(--red); border-color: var(--red); }
 .nav-links a.nav-pibly { color: var(--red); }
 .t-body > p:not(.sub) { margin-top: 10px; color: var(--muted); font-size: 15.5px; max-width: 62ch; }
+
+/* Tool icons */
+.toolbox > div { padding: 24px 22px 26px; }
+.tools { display: flex; flex-wrap: wrap; gap: 18px 8px; margin-top: 16px; }
+.tool { width: 68px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+.tool i { display: block; width: 30px; height: 30px; background: var(--red); transition: background .2s ease, transform .2s ease; -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; }
+.tool span { font-size: 11.5px; line-height: 1.25; color: var(--muted); }
+.tool:hover i { background: var(--c); transform: translateY(-2px); }
+@media (max-width: 560px) { .tool { width: 64px; } }
+.i-react { --c: #61DAFB; }
+.i-react i { -webkit-mask-image: url(../assets/icons/react.svg); mask-image: url(../assets/icons/react.svg); }
+.i-nextdotjs { --c: #17181a; }
+.i-nextdotjs i { -webkit-mask-image: url(../assets/icons/nextdotjs.svg); mask-image: url(../assets/icons/nextdotjs.svg); }
+.i-angular { --c: #DD0031; }
+.i-angular i { -webkit-mask-image: url(../assets/icons/angular.svg); mask-image: url(../assets/icons/angular.svg); }
+.i-typescript { --c: #3178C6; }
+.i-typescript i { -webkit-mask-image: url(../assets/icons/typescript.svg); mask-image: url(../assets/icons/typescript.svg); }
+.i-javascript { --c: #E8C81B; }
+.i-javascript i { -webkit-mask-image: url(../assets/icons/javascript.svg); mask-image: url(../assets/icons/javascript.svg); }
+.i-html5 { --c: #E34F26; }
+.i-html5 i { -webkit-mask-image: url(../assets/icons/html5.svg); mask-image: url(../assets/icons/html5.svg); }
+.i-sass { --c: #CC6699; }
+.i-sass i { -webkit-mask-image: url(../assets/icons/sass.svg); mask-image: url(../assets/icons/sass.svg); }
+.i-nodedotjs { --c: #5FA04E; }
+.i-nodedotjs i { -webkit-mask-image: url(../assets/icons/nodedotjs.svg); mask-image: url(../assets/icons/nodedotjs.svg); }
+.i-express { --c: #17181a; }
+.i-express i { -webkit-mask-image: url(../assets/icons/express.svg); mask-image: url(../assets/icons/express.svg); }
+.i-nestjs { --c: #E0234E; }
+.i-nestjs i { -webkit-mask-image: url(../assets/icons/nestjs.svg); mask-image: url(../assets/icons/nestjs.svg); }
+.i-java { --c: #E76F00; }
+.i-java i { -webkit-mask-image: url(../assets/icons/java.svg); mask-image: url(../assets/icons/java.svg); }
+.i-springboot { --c: #6DB33F; }
+.i-springboot i { -webkit-mask-image: url(../assets/icons/springboot.svg); mask-image: url(../assets/icons/springboot.svg); }
+.i-csharp { --c: #68217A; }
+.i-csharp i { -webkit-mask-image: url(../assets/icons/csharp.svg); mask-image: url(../assets/icons/csharp.svg); }
+.i-dotnet { --c: #512BD4; }
+.i-dotnet i { -webkit-mask-image: url(../assets/icons/dotnet.svg); mask-image: url(../assets/icons/dotnet.svg); }
+.i-python { --c: #3776AB; }
+.i-python i { -webkit-mask-image: url(../assets/icons/python.svg); mask-image: url(../assets/icons/python.svg); }
+.i-php { --c: #777BB4; }
+.i-php i { -webkit-mask-image: url(../assets/icons/php.svg); mask-image: url(../assets/icons/php.svg); }
+.i-symfony { --c: #17181a; }
+.i-symfony i { -webkit-mask-image: url(../assets/icons/symfony.svg); mask-image: url(../assets/icons/symfony.svg); }
+.i-langchain { --c: #1C3C3C; }
+.i-langchain i { -webkit-mask-image: url(../assets/icons/langchain.svg); mask-image: url(../assets/icons/langchain.svg); }
+.i-postgresql { --c: #4169E1; }
+.i-postgresql i { -webkit-mask-image: url(../assets/icons/postgresql.svg); mask-image: url(../assets/icons/postgresql.svg); }
+.i-mysql { --c: #4479A1; }
+.i-mysql i { -webkit-mask-image: url(../assets/icons/mysql.svg); mask-image: url(../assets/icons/mysql.svg); }
+.i-mongodb { --c: #47A248; }
+.i-mongodb i { -webkit-mask-image: url(../assets/icons/mongodb.svg); mask-image: url(../assets/icons/mongodb.svg); }
+.i-microsoftsqlserver { --c: #CC2927; }
+.i-microsoftsqlserver i { -webkit-mask-image: url(../assets/icons/microsoftsqlserver.svg); mask-image: url(../assets/icons/microsoftsqlserver.svg); }
+.i-sqlite { --c: #003B57; }
+.i-sqlite i { -webkit-mask-image: url(../assets/icons/sqlite.svg); mask-image: url(../assets/icons/sqlite.svg); }
+.i-firebase { --c: #DD2C00; }
+.i-firebase i { -webkit-mask-image: url(../assets/icons/firebase.svg); mask-image: url(../assets/icons/firebase.svg); }
+.i-docker { --c: #2496ED; }
+.i-docker i { -webkit-mask-image: url(../assets/icons/docker.svg); mask-image: url(../assets/icons/docker.svg); }
+.i-githubactions { --c: #2088FF; }
+.i-githubactions i { -webkit-mask-image: url(../assets/icons/githubactions.svg); mask-image: url(../assets/icons/githubactions.svg); }
+.i-gitlab { --c: #FC6D26; }
+.i-gitlab i { -webkit-mask-image: url(../assets/icons/gitlab.svg); mask-image: url(../assets/icons/gitlab.svg); }
+.i-amazonwebservices { --c: #FF9900; }
+.i-amazonwebservices i { -webkit-mask-image: url(../assets/icons/amazonwebservices.svg); mask-image: url(../assets/icons/amazonwebservices.svg); }
+.i-googlecloud { --c: #4285F4; }
+.i-googlecloud i { -webkit-mask-image: url(../assets/icons/googlecloud.svg); mask-image: url(../assets/icons/googlecloud.svg); }
+.i-linux { --c: #17181a; }
+.i-linux i { -webkit-mask-image: url(../assets/icons/linux.svg); mask-image: url(../assets/icons/linux.svg); }
+.i-jest { --c: #C21325; }
+.i-jest i { -webkit-mask-image: url(../assets/icons/jest.svg); mask-image: url(../assets/icons/jest.svg); }
+.i-junit5 { --c: #25A162; }
+.i-junit5 i { -webkit-mask-image: url(../assets/icons/junit5.svg); mask-image: url(../assets/icons/junit5.svg); }
+.i-postman { --c: #FF6C37; }
+.i-postman i { -webkit-mask-image: url(../assets/icons/postman.svg); mask-image: url(../assets/icons/postman.svg); }
+.i-git { --c: #F03C2E; }
+.i-git i { -webkit-mask-image: url(../assets/icons/git.svg); mask-image: url(../assets/icons/git.svg); }
+.i-reactnative { --c: #61DAFB; }
+.i-reactnative i { -webkit-mask-image: url(../assets/icons/reactnative.svg); mask-image: url(../assets/icons/reactnative.svg); }
+.i-restapi { --c: #17181a; }
+.i-restapi i { -webkit-mask-image: url(../assets/icons/restapi.svg); mask-image: url(../assets/icons/restapi.svg); }
+.i-langgraph { --c: #1C3C3C; }
+.i-langgraph i { -webkit-mask-image: url(../assets/icons/langgraph.svg); mask-image: url(../assets/icons/langgraph.svg); }
+.i-llmapi { --c: #17181a; }
+.i-llmapi i { -webkit-mask-image: url(../assets/icons/llmapi.svg); mask-image: url(../assets/icons/llmapi.svg); }
+.i-rag { --c: #17181a; }
+.i-rag i { -webkit-mask-image: url(../assets/icons/rag.svg); mask-image: url(../assets/icons/rag.svg); }
+.i-agents { --c: #17181a; }
+.i-agents i { -webkit-mask-image: url(../assets/icons/agents.svg); mask-image: url(../assets/icons/agents.svg); }
+.i-modelcontextprotocol { --c: #17181a; }
+.i-modelcontextprotocol i { -webkit-mask-image: url(../assets/icons/modelcontextprotocol.svg); mask-image: url(../assets/icons/modelcontextprotocol.svg); }
+.i-pgvector { --c: #17181a; }
+.i-pgvector i { -webkit-mask-image: url(../assets/icons/pgvector.svg); mask-image: url(../assets/icons/pgvector.svg); }
+.i-supertest { --c: #17181a; }
+.i-supertest i { -webkit-mask-image: url(../assets/icons/supertest.svg); mask-image: url(../assets/icons/supertest.svg); }
+.i-scrum { --c: #17181a; }
+.i-scrum i { -webkit-mask-image: url(../assets/icons/scrum.svg); mask-image: url(../assets/icons/scrum.svg); }
+@media (max-width: 560px) {
+  .toolbox > div { padding: 22px 18px 24px; }
+  .tools { gap: 16px 0; }
+  .tool { width: 25%; }
+  .tool span { font-size: 11px; }
+}
